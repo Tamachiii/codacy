@@ -1,19 +1,19 @@
 # return string without spaces
 def erase(cc):
   chaine = ""
-  for i in range(len(str)):
-    if i == len(str) - 1 and str[i] == " ":
-      if str[i] == " ":
+  for i in range(len(cc)):
+    if i == len(cc) - 1 and cc[i] == " ":
+      if cc[i] == " ":
         chaine += ""
       else:
-        chaine += str[-1]
+        chaine += cc[-1]
       break
-    if str[i] != " ":
-      chaine += str[i]
-    elif (str[i] == " " and str[i + 1]) == " " or (str[i] == " " and str[i - 1] == " "):
-      chaine += str[i]
+    if cc[i] != " ":
+      chaine += cc[i]
+    elif (cc[i] == " " and cc[i + 1]) == " " or (cc[i] == " " and cc[i - 1] == " "):
+      chaine += cc[i]
     else:
       chaine += ""
-    return
+    return chaine
 
 print(erase("test  "))
